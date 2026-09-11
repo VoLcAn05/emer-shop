@@ -1,0 +1,185 @@
+import type { Product } from "./types";
+
+/**
+ * Product catalog.
+ *
+ * All data here comes from Emer Shop's real promotional flyers.
+ * Nothing has been invented: if a field (price, brand, feature) was
+ * not clearly visible/confirmed in the source material, it is left
+ * undefined instead of guessed. See README.md for how to add, edit,
+ * or remove products.
+ */
+export const products: Product[] = [
+  {
+    id: "super-combo-kemei",
+    name: "Súper Combo Kemei",
+    brand: "Kemei",
+    category: "maquinas-herramientas",
+    price: 100,
+    currency: "USD",
+    image: "/images/products/combo-kemei.webp",
+    description:
+      "Combo profesional Kemei: cortadora de cabello, máquina de afeitar y trimmer, incluyendo espray de cuidado y enfriamiento para cuchillas.",
+    features: [
+      "Incluye: Kemei Hair Clipper, Kemei Shaver y Kemei Trimmer",
+      "Incluye Kemei Cooling Care Spray para cuchillas (300 ml)",
+      "Cortes precisos",
+      "Batería de larga duración",
+      "Máxima calidad",
+      "Ideal para profesionales",
+      "Productos originales con garantía de calidad",
+    ],
+    available: true,
+    featured: true,
+  },
+  {
+    id: "peel-off-mask-gold-collagen",
+    name: "Peel-Off Mask · Gold Collagen + Hyaluronic Acid",
+    brand: "Sadoer",
+    category: "cuidado-personal",
+    price: 5,
+    currency: "USD",
+    priceNote: "Pago en bolívares a tasa BCV",
+    image: "/images/products/peel-off-mask-gold-collagen.webp",
+    description:
+      "Mascarilla peel-off con colágeno dorado y ácido hialurónico. Limpieza profunda para una piel renovada. 100 g / 3.5 oz.",
+    features: [
+      "Whitening / efecto anti-arrugas",
+      "Controla el exceso de grasa",
+      "Elimina puntos negros",
+      "Ilumina la piel",
+      "Cierra los poros",
+      "Para todo tipo de piel",
+    ],
+    available: true,
+    featured: true,
+  },
+  {
+    id: "peel-off-mask-aloe-vera",
+    name: "Peel-Off Mask · Aloe Vera + Bamboo Charcoal",
+    brand: "Sadoer",
+    category: "cuidado-personal",
+    price: 5,
+    currency: "USD",
+    priceNote: "Pago en bolívares a tasa BCV",
+    image: "/images/products/peel-off-mask-aloe-vera.webp",
+    description:
+      "Mascarilla peel-off (black mask) con aloe vera y carbón de bambú. Limpieza profunda, piel renovada. 100 g / 3.5 oz.",
+    features: [
+      "Whitening / anti-acné",
+      "Controla el exceso de grasa",
+      "Elimina puntos negros",
+      "Fórmula botánica",
+      "Cierra los poros",
+      "Para todo tipo de piel",
+    ],
+    available: true,
+    featured: false,
+  },
+  {
+    id: "peel-off-mask-rose",
+    name: "Peel-Off Mask · Rose Extract + Bamboo Charcoal",
+    brand: "Sadoer",
+    category: "cuidado-personal",
+    price: 5,
+    currency: "USD",
+    priceNote: "Pago en bolívares a tasa BCV",
+    image: "/images/products/peel-off-mask-rose.webp",
+    description:
+      "Mascarilla peel-off (black mask) con extracto de rosas y carbón de bambú. Limpieza profunda, piel renovada. 100 g / 3.5 oz.",
+    features: [
+      "Whitening / anti-acné",
+      "Controla el exceso de grasa",
+      "Elimina puntos negros",
+      "Fórmula botánica",
+      "Cierra los poros",
+      "Para todo tipo de piel",
+    ],
+    available: true,
+    featured: false,
+  },
+  {
+    id: "peel-off-mask-dead-sea-mud",
+    name: "Peel-Off Mask · Dead Sea Mud + Rich Minerals",
+    brand: "Sadoer",
+    category: "cuidado-personal",
+    price: 5,
+    currency: "USD",
+    priceNote: "Pago en bolívares a tasa BCV",
+    image: "/images/products/peel-off-mask-dead-sea-mud.webp",
+    description:
+      "Mascarilla peel-off (black mask) con lodo del Mar Muerto y minerales. Limpieza profunda, piel renovada. 100 g / 3.5 oz.",
+    features: [
+      "Ilumina la piel",
+      "Controla el exceso de grasa",
+      "Elimina puntos negros",
+      "Equilibra el pH de la piel",
+      "Cierra los poros finos",
+      "Para todo tipo de piel",
+    ],
+    available: true,
+    featured: false,
+  },
+  {
+    id: "contenedor-hojillas-desechable",
+    name: "Contenedor para Hojillas Desechable",
+    category: "higiene-desechables",
+    price: 5,
+    currency: "USD",
+    priceNote: "Costo en divisa",
+    image: "/images/products/contenedor-hojillas.webp",
+    description:
+      "Contenedor desechable para el descarte seguro de hojillas usadas, con gancho para cinturón. Uso profesional en barberías, salones y clínicas.",
+    features: [
+      "Elimina las hojillas usadas de forma segura e higiénica",
+      "Material resistente y a prueba de perforaciones",
+      "Tapa segura y práctica para su desecho",
+      "Incluye gancho para cinturón",
+      "Previene infecciones y contaminación",
+      "Ideal para barberías, salones y clínicas",
+    ],
+    available: true,
+    featured: true,
+  },
+  {
+    id: "porta-peines",
+    name: "Porta Peines",
+    category: "accesorios-barberia",
+    price: 5,
+    currency: "USD",
+    priceNote: "Costo en divisa",
+    image: "/images/products/porta-peines.webp",
+    description:
+      "Organizador de peines con espacios individuales. Mantiene tus peines siempre ordenados y al alcance.",
+    features: [
+      "Máxima organización",
+      "Plástico de alta calidad, duradero y fácil de limpiar",
+      "Espacios individuales que asegura cada peine en su lugar",
+      "Fácil de desmontar y limpiar",
+      "Compatible con peines de distintos tamaños y marcas",
+      "Ideal para barberías y uso personal",
+    ],
+    available: true,
+    featured: true,
+  },
+  {
+    id: "repuestos-cuchillas-afeitadora",
+    name: "Repuestos Genéricos para Máquina de Afeitar",
+    category: "repuestos",
+    price: 5,
+    currency: "USD",
+    priceNote: "Costo en divisa",
+    image: "/images/products/repuestos-afeitadora.webp",
+    description:
+      "Repuestos genéricos (lámina y cuchilla) para máquina de afeitar. Compatibles con la mayoría de las máquinas.",
+    features: [
+      "Corte preciso, máximo rendimiento",
+      "Material duradero y de calidad",
+      "Fácil instalación, se adapta fácilmente",
+      "Afeitado suave, sin irritaciones",
+      "Compatible con la mayoría de máquinas",
+    ],
+    available: true,
+    featured: false,
+  },
+];
