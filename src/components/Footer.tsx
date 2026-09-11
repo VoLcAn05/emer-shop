@@ -65,7 +65,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-ink-border/60 pt-6 text-xs text-paper/40">
+        <div className="mt-10 border-t border-ink-border/60 pt-6 text-xs text-paper/50">
           © {new Date().getFullYear()} {siteConfig.businessName}. Todos los
           derechos reservados.
         </div>

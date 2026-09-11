@@ -19,7 +19,7 @@ export function SortSelect({
       value={value}
       onChange={(e) => onChange(e.target.value as SortOption)}
       aria-label="Ordenar productos"
-      className="rounded-full border border-ink-border bg-ink-soft px-4 py-2.5 text-sm text-paper/80 focus:border-gold-500/60"
+      className="min-h-11 rounded-full border border-ink-border bg-ink-soft px-4 text-sm text-paper/80 focus:border-gold-500/60"
     >
       {options.map((option) => (
         <option key={option.value} value={option.value} className="bg-ink-soft">

@@ -38,7 +38,7 @@ function Chip({
       type="button"
       onClick={onClick}
       aria-pressed={selected}
-      className={`shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+      className={`flex min-h-11 shrink-0 items-center whitespace-nowrap rounded-full border px-4 text-sm font-medium transition-colors ${
         selected
           ? "border-gold-500 bg-gold-500 text-ink"
           : "border-ink-border bg-ink-soft text-paper/70 hover:border-gold-500/40 hover:text-paper"

@@ -5,8 +5,9 @@ import { getGeneralWhatsAppLink } from "../utils/whatsapp";
 import { CloseIcon, MenuIcon, WhatsAppIcon } from "./icons";
 
 const navLinks = [
-  { label: "Catálogo", href: "#catalogo" },
+  { label: "Categorías", href: "#categorias" },
   { label: "Destacados", href: "#destacados" },
+  { label: "Catálogo", href: "#catalogo" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -75,7 +76,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-paper hover:bg-ink-elevated"
+            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full text-paper hover:bg-ink-elevated"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
           >

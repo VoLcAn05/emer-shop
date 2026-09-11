@@ -1,5 +1,7 @@
 import { Hero } from "../components/Hero";
+import { Categories } from "../components/Categories";
 import { FeaturedSection } from "../components/FeaturedSection";
+import { ValueProps } from "../components/ValueProps";
 import { SearchBar } from "../components/SearchBar";
 import { CategoryFilter } from "../components/CategoryFilter";
 import { SortSelect } from "../components/SortSelect";
@@ -12,10 +14,17 @@ export function Home() {
   const { search, setSearch, category, setCategory, sort, setSort, filtered } =
     useProductFilters(products);
 
+  function handleSelectCategory(categoryId: string) {
+    setCategory(categoryId);
+    document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <Hero />
+      <Categories onSelect={handleSelectCategory} />
       <FeaturedSection />
+      <ValueProps />
 
       <section id="catalogo" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-6">

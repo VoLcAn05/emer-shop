@@ -36,7 +36,7 @@ export function ProductDetail() {
     .slice(0, 4);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 pb-28 pt-8 sm:px-6 sm:py-12">
       <Link
         to="/"
         className="inline-flex items-center gap-1 text-sm font-medium text-paper/60 hover:text-gold-400"
@@ -50,7 +50,7 @@ export function ProductDetail() {
           <img
             src={product.image}
             alt={product.name}
-            className="aspect-square w-full object-cover"
+            className="aspect-[4/5] w-full object-cover"
           />
         </div>
 
@@ -64,7 +64,7 @@ export function ProductDetail() {
           </h1>
 
           <div className="mt-4 flex items-center gap-3">
-            <span className="font-heading text-3xl font-semibold text-paper">
+            <span className="font-heading text-3xl font-semibold text-gold-400">
               {formatPrice(product)}
             </span>
             {!product.available && (
@@ -74,7 +74,7 @@ export function ProductDetail() {
             )}
           </div>
           {product.priceNote && (
-            <p className="mt-1 text-xs text-paper/40">{product.priceNote}</p>
+            <p className="mt-1 text-xs text-paper/50">{product.priceNote}</p>
           )}
 
           <p className="mt-5 leading-relaxed text-paper/70">{product.description}</p>
@@ -90,26 +90,9 @@ export function ProductDetail() {
             </ul>
           )}
 
-          <div className="mt-8">
-            {product.available ? (
-              <a
-                href={getProductWhatsAppLink(product)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3.5 text-base font-semibold text-ink transition-colors hover:bg-gold-400 sm:w-auto"
-              >
-                <WhatsAppIcon className="h-5 w-5" />
-                Comprar por WhatsApp
-              </a>
-            ) : (
-              <button
-                type="button"
-                disabled
-                className="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-full bg-ink-elevated px-6 py-3.5 text-base font-semibold text-paper/40 sm:w-auto"
-              >
-                Producto agotado
-              </button>
-            )}
+          {/* Desktop / tablet CTA — the mobile equivalent is the sticky bar below */}
+          <div className="mt-8 hidden md:block">
+            <ProductCTA product={product} />
           </div>
         </div>
       </div>
@@ -124,6 +107,55 @@ export function ProductDetail() {
           </div>
         </div>
       )}
+
+      {/* Sticky mobile conversion bar: keeps price + WhatsApp CTA in reach
+          while the user reads a long description/feature list. */}
+      <div className="pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-ink-border/60 bg-ink/95 px-4 py-3 backdrop-blur md:hidden">
+        <div className="flex items-center gap-3">
+          <span className="font-heading text-lg font-semibold text-gold-400">
+            {formatPrice(product)}
+          </span>
+          <div className="flex-1">
+            <ProductCTA product={product} compact />
+          </div>
+        </div>
+      </div>
     </div>
+  );
+}
+
+function ProductCTA({
+  product,
+  compact = false,
+}: {
+  product: (typeof products)[number];
+  compact?: boolean;
+}) {
+  if (!product.available) {
+    return (
+      <button
+        type="button"
+        disabled
+        className={`inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-full bg-ink-elevated font-semibold text-paper/50 ${
+          compact ? "px-4 py-2.5 text-sm" : "px-6 py-3.5 text-base sm:w-auto"
+        }`}
+      >
+        Producto agotado
+      </button>
+    );
+  }
+
+  return (
+    <a
+      href={getProductWhatsAppLink(product)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 font-semibold text-ink transition-colors active:scale-95 sm:hover:bg-gold-400 ${
+        compact ? "px-4 py-2.5 text-sm" : "px-6 py-3.5 text-base sm:w-auto"
+      }`}
+    >
+      <WhatsAppIcon className={compact ? "h-4 w-4" : "h-5 w-5"} />
+      Comprar por WhatsApp
+    </a>
   );
 }

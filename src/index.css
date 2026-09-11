@@ -67,3 +67,14 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+/* Subtle dot-grid texture used behind the hero — kept faint on purpose. */
+.bg-dot-grid {
+  background-image: radial-gradient(var(--color-paper) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Safe-area aware bottom padding for iOS home-indicator clearance. */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
