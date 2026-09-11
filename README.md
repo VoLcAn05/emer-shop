@@ -187,15 +187,43 @@ logo: {
 },
 ```
 
-### Agregar redes sociales u horarios
+### Cambiar los enlaces de Instagram / TikTok
 
-Ambos campos existen en `src/data/config.ts` pero están vacíos porque no se
+En `src/data/config.ts`:
+
+```ts
+instagramUrl: "https://www.instagram.com/emershopve",
+tiktokUrl: "https://www.tiktok.com/@emershop.ve",
+```
+
+La sección "Síguenos" en la home (`src/components/SocialLinks.tsx`) usa
+estos dos valores automáticamente — no hay enlaces sueltos en el componente.
+
+### Completar la información del fundador ("Conoce Emer Shop")
+
+En `src/data/config.ts`, dentro de `founder`:
+
+```ts
+founder: {
+  photo: "/images/team/founder.webp",
+  name: "Nombre del fundador",     // reemplaza con el nombre real
+  role: "Fundador de Emer Shop",
+  bio: "Presentación pendiente...", // reemplaza con la historia real
+},
+```
+
+Para cambiar la foto, coloca el nuevo archivo en `public/images/team/` y
+actualiza la ruta `photo`. El nombre y la biografía actuales son
+placeholders visibles a propósito — reemplázalos cuando tengas el texto
+definitivo; el componente (`src/components/AboutFounder.tsx`) no necesita
+ningún cambio.
+
+### Agregar horarios
+
+Este campo existe en `src/data/config.ts` pero está vacío porque no se
 proporcionó esa información todavía:
 
 ```ts
-socialLinks: [
-  { label: "Instagram", url: "https://instagram.com/emershop" },
-],
 businessHours: [
   { day: "Lunes a Sábado", hours: "9:00 am – 6:00 pm" },
 ],
@@ -224,7 +252,9 @@ está pensada para escalar a muchos más productos sin tocar el diseño.
 ## 8. Pendientes conocidos (a completar cuando haya información real)
 
 - Número de WhatsApp definitivo (actualmente hay uno de prueba).
-- Redes sociales.
+- Nombre, cargo real (si es distinto de "Fundador de Emer Shop") e historia
+  del fundador para la sección "Conoce Emer Shop" (hoy con placeholders
+  visibles en `siteConfig.founder`).
 - Horarios de atención.
 - Dominio propio (para completar `og:image` con URL absoluta y agregar una
   etiqueta `canonical` en `index.html`).

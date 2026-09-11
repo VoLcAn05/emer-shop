@@ -221,6 +221,33 @@ export function RefreshIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function InstagramIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" />
+      <path d="M17.5 6.5h.01" />
+    </svg>
+  );
+}
+
+export function TikTokIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M16.6 5.82c-.9-.94-1.42-2.16-1.46-3.5V2h-3.4v13.4a2.59 2.59 0 1 1-1.83-2.48v-3.47a5.94 5.94 0 0 0-1.13-.11A5.99 5.99 0 1 0 14.77 15V9.03a8.35 8.35 0 0 0 4.87 1.56V7.2a4.85 4.85 0 0 1-3.04-1.38Z" />
+    </svg>
+  );
+}
+
 export function ChevronRightIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

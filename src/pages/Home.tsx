@@ -2,6 +2,8 @@ import { Hero } from "../components/Hero";
 import { Categories } from "../components/Categories";
 import { FeaturedSection } from "../components/FeaturedSection";
 import { ValueProps } from "../components/ValueProps";
+import { AboutFounder } from "../components/AboutFounder";
+import { SocialLinks } from "../components/SocialLinks";
 import { FinalCTA } from "../components/FinalCTA";
 import { SearchBar } from "../components/SearchBar";
 import { CategoryFilter } from "../components/CategoryFilter";
@@ -51,6 +53,8 @@ export function Home() {
         </div>
       </section>
 
+      <AboutFounder />
+      <SocialLinks />
       <FinalCTA />
     </>
   );

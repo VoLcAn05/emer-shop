@@ -44,12 +44,24 @@ export const siteConfig = {
     emblem: "/images/logo/emer-shop-emblem.png",
   },
 
+  /** Official Instagram profile URL. Used by the "Síguenos en redes" section. */
+  instagramUrl: "https://www.instagram.com/emershopve?stkn=ejVvZ2pzd2Zra3U=",
+
+  /** Official TikTok profile URL. Used by the "Síguenos en redes" section. */
+  tiktokUrl: "https://www.tiktok.com/@emershop.ve?_r=1&_t=ZS-99dFkYeEtce",
+
   /**
-   * Social links — intentionally empty until Emer Shop provides them.
-   * Add entries like { label: "Instagram", url: "https://instagram.com/..." }
-   * and the footer will render them automatically.
+   * "Conoce Emer Shop" section content. The photo is a real photo of the
+   * person behind the business. The name/role/bio below are placeholders —
+   * REPLACE them with the real information once it's provided; nothing
+   * here should be treated as a real biography until then.
    */
-  socialLinks: [] as { label: string; url: string }[],
+  founder: {
+    photo: "/images/team/founder.webp",
+    name: "Nombre del fundador", // PLACEHOLDER — reemplazar con el nombre real
+    role: "Fundador de Emer Shop",
+    bio: "Presentación pendiente por completar con la historia real detrás de Emer Shop.", // PLACEHOLDER
+  },
 
   /**
    * Business hours — intentionally empty until Emer Shop provides them.
