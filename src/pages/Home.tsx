@@ -2,6 +2,7 @@ import { Hero } from "../components/Hero";
 import { Categories } from "../components/Categories";
 import { FeaturedSection } from "../components/FeaturedSection";
 import { ValueProps } from "../components/ValueProps";
+import { FinalCTA } from "../components/FinalCTA";
 import { SearchBar } from "../components/SearchBar";
 import { CategoryFilter } from "../components/CategoryFilter";
 import { SortSelect } from "../components/SortSelect";
@@ -49,6 +50,8 @@ export function Home() {
           <ProductGrid products={filtered} />
         </div>
       </section>
+
+      <FinalCTA />
     </>
   );
 }

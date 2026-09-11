@@ -30,12 +30,12 @@ const items = [
 
 export function ValueProps() {
   return (
-    <section className="border-y border-ink-border/60 bg-ink-soft/50">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-4 lg:gap-8">
+    <section className="bg-ink-soft/40">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-4 lg:gap-8">
         {items.map((item) => (
           <div key={item.title} className="flex flex-col items-start gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500/10 text-gold-400">
-              <item.icon className="h-5 w-5" />
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-border text-paper/70">
+              <item.icon className="h-4 w-4" />
             </span>
             <h3 className="font-heading text-sm font-semibold text-paper sm:text-base">
               {item.title}

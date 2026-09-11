@@ -30,7 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
       </Link>
 
       <div className="flex flex-1 flex-col gap-1.5 p-3.5 sm:p-4">
-        <p className="truncate text-[11px] font-medium uppercase tracking-wide text-gold-400/90 sm:text-xs">
+        <p className="truncate text-[11px] font-medium uppercase tracking-wide text-paper/45 sm:text-xs">
           {[product.brand, category?.name].filter(Boolean).join(" · ")}
         </p>
 

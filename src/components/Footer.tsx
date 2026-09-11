@@ -26,7 +26,7 @@ export function Footer() {
               {siteConfig.location.city}, {siteConfig.location.country}.
             </p>
             <p className="mt-3 flex items-center gap-2 text-sm text-paper/60">
-              <MapPinIcon className="h-4 w-4 shrink-0 text-gold-500" />
+              <MapPinIcon className="h-4 w-4 shrink-0 text-paper/40" />
               {siteConfig.location.city}, {siteConfig.location.country}
             </p>
           </div>

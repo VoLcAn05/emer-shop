@@ -55,7 +55,7 @@ export function ProductDetail() {
         </div>
 
         <div className="flex flex-col">
-          <p className="text-xs font-medium uppercase tracking-wide text-gold-400/90">
+          <p className="text-xs font-medium uppercase tracking-wide text-paper/45">
             {[product.brand, category?.name].filter(Boolean).join(" · ")}
           </p>
 

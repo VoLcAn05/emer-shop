@@ -37,7 +37,10 @@ export function Categories({
   if (withCounts.length === 0) return null;
 
   return (
-    <section id="categorias" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+    <section
+      id="categorias"
+      className="mx-auto max-w-6xl border-t border-ink-border/40 px-4 py-12 sm:px-6 sm:py-16"
+    >
       <div className="mb-6">
         <h2 className="font-heading text-2xl font-semibold text-paper sm:text-3xl">
           Categorías
@@ -55,10 +58,10 @@ export function Categories({
               key={category.id}
               type="button"
               onClick={() => onSelect(category.id)}
-              className="group flex w-[42vw] shrink-0 flex-col items-start gap-3 rounded-2xl border border-ink-border/60 bg-ink-soft p-4 text-left transition-colors hover:border-gold-500/50 sm:w-auto"
+              className="group flex w-[42vw] shrink-0 flex-col items-start gap-3 rounded-2xl border border-ink-border/60 bg-ink-soft p-4 text-left transition-colors hover:border-gold-500/40 sm:w-auto"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500/10 text-gold-400 transition-colors group-hover:bg-gold-500 group-hover:text-ink">
-                <Icon className="h-5 w-5" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-border text-paper/70 transition-colors group-hover:border-gold-500/50 group-hover:text-gold-500">
+                <Icon className="h-4 w-4" />
               </span>
               <span className="font-heading text-sm font-semibold leading-snug text-paper sm:text-base">
                 {category.name}

@@ -16,7 +16,7 @@ export function FeaturedSection() {
           Productos destacados
         </h2>
         <p className="mt-1 text-sm text-paper/60">
-          Lo más elegido de nuestro catálogo.
+          Una selección para empezar a explorar el catálogo.
         </p>
       </div>
 

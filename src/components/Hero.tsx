@@ -1,15 +1,10 @@
 import { siteConfig } from "../data/config";
 import { getGeneralWhatsAppLink } from "../utils/whatsapp";
-import { CheckCircleIcon, RefreshIcon, WhatsAppIcon } from "./icons";
-
-const bullets = [
-  { icon: CheckCircleIcon, label: "Atención directa" },
-  { icon: RefreshIcon, label: "Catálogo actualizado" },
-];
+import { WhatsAppIcon } from "./icons";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-ink-border/60">
+    <section className="relative overflow-hidden">
       <div
         className="bg-dot-grid pointer-events-none absolute inset-0 opacity-[0.03]"
         aria-hidden="true"
@@ -17,12 +12,6 @@ export function Hero() {
       <div
         className="pointer-events-none absolute -top-40 right-[-15%] h-96 w-96 rounded-full bg-gold-500/10 blur-3xl"
         aria-hidden="true"
-      />
-      <img
-        src={siteConfig.logo.emblem}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-16 bottom-[-15%] hidden h-[26rem] w-[26rem] rounded-full object-cover opacity-[0.06] sm:block"
       />
 
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
@@ -58,18 +47,6 @@ export function Hero() {
             <WhatsAppIcon className="h-4 w-4" />
             Comprar por WhatsApp
           </a>
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-ink-border/60 pt-6">
-          {bullets.map((bullet) => (
-            <span
-              key={bullet.label}
-              className="inline-flex items-center gap-2 text-xs font-medium text-paper/60 sm:text-sm"
-            >
-              <bullet.icon className="h-4 w-4 text-gold-500" />
-              {bullet.label}
-            </span>
-          ))}
         </div>
       </div>
     </section>
