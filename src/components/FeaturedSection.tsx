@@ -1,5 +1,5 @@
 import { products } from "../data/products";
-import { ProductCard } from "./ProductCard";
+import { ProductGrid } from "./ProductGrid";
 
 export function FeaturedSection() {
   const featured = products.filter((p) => p.featured);
@@ -18,14 +18,10 @@ export function FeaturedSection() {
         <p className="mt-1 text-sm text-paper/60">
           Una selección para empezar a explorar el catálogo.
         </p>
-      </div>
 
-      <div className="no-scrollbar mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-auto sm:mt-8 sm:grid sm:max-w-6xl sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-6 lg:grid-cols-4">
-        {featured.map((product) => (
-          <div key={product.id} className="w-[75%] shrink-0 snap-start sm:w-auto">
-            <ProductCard product={product} />
-          </div>
-        ))}
+        <div className="mt-6 sm:mt-8">
+          <ProductGrid products={featured} />
+        </div>
       </div>
     </section>
   );
