@@ -11,15 +11,13 @@ export const siteConfig = {
   tagline: "Productos para barbería",
 
   /**
-   * TEMPORARY test number provided for development/testing only.
-   * This is NOT necessarily the final Emer Shop WhatsApp number.
-   * Replace this single value once the real number is confirmed —
-   * every WhatsApp button in the app reads from here.
+   * Official Emer Shop WhatsApp number.
+   * Every WhatsApp button in the app reads from here.
    *
    * Format: international format, digits only, no "+" or spaces
-   * (e.g. Venezuela +58 412 761 4901 -> "584127614901").
+   * (e.g. Venezuela +58 412 674 6532 -> "584126746532").
    */
-  whatsappNumber: "584127614901",
+  whatsappNumber: "584126746532",
 
   /** Default message used by the general/floating WhatsApp button. */
   whatsappDefaultMessage:
